@@ -23,7 +23,7 @@ public class Board {
     }
 
     public Piece piece(int rows, int column){
-        if (positionExists(rows, column)){
+        if (!positionExists(rows, column)){
             throw new BoardingException("Position not on the board");
         }
         return pieces[rows][column];
